@@ -7,7 +7,7 @@ class ActionDay(Base):
     __tablename__ = "action_day"
     
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text)
+    ticker = Column(Text, index=True)
     per = Column(Text)
     date = Column(Text)
     time = Column(Text)
@@ -23,7 +23,7 @@ class ActionHour(Base):
     __tablename__ = "action_hour"
     
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text)
+    ticker = Column(Text, index=True)
     per = Column(Text)
     date = Column(Text)
     time = Column(Text)
@@ -39,7 +39,7 @@ class Action30Minutes(Base):
     __tablename__ = "action_30_minutes"
     
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text)
+    ticker = Column(Text, index=True)
     per = Column(Text)
     date = Column(Text)
     time = Column(Text)
@@ -55,7 +55,7 @@ class Action10Minutes(Base):
     __tablename__ = "action_10_minutes"
     
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text)
+    ticker = Column(Text, index=True)
     per = Column(Text)
     date = Column(Text)
     time = Column(Text)
@@ -71,7 +71,7 @@ class Action(Base):
     __tablename__ = "action_base"
     
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text)
+    ticker = Column(Text, index=True)
     per = Column(Text)
     date = Column(Text)
     time = Column(Text)
@@ -97,6 +97,6 @@ class IsinInformations(Base):
     securityType = Column(Text)
     securityType2 = Column(Text)
     shareClassFIGI = Column(Text)
-    ticker = Column(Text)
+    ticker = Column(Text, index=True)
     uniqueID = Column(Text)
     uniqueIDFutOpt = Column(Text)

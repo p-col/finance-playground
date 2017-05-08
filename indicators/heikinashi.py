@@ -317,7 +317,7 @@ class HeikinAshi(Base):
     __tablename__ = "heikinashi"
 
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text, nullable=False)
+    ticker = Column(Text, nullable=False, index=True)
     per = Column(Text, nullable=False)
     date = Column(Text, nullable=False)
     time = Column(Text, nullable=False)
@@ -330,7 +330,7 @@ class HeikinAshiHour(Base):
     __tablename__ = "heikinashi_hour"
 
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text, nullable=False)
+    ticker = Column(Text, nullable=False, index=True)
     per = Column(Text, nullable=False)
     date = Column(Text, nullable=False)
     time = Column(Text, nullable=False)
@@ -343,7 +343,7 @@ class HeikinAshiDay(Base):
     __tablename__ = "heikinashi_day"
 
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text, nullable=False)
+    ticker = Column(Text, nullable=False, index=True)
     per = Column(Text, nullable=False)
     date = Column(Text, nullable=False)
     time = Column(Text, nullable=False)
@@ -357,7 +357,7 @@ class HeikinAshi30Minutes(Base):
     __tablename__ = "heikinashi_30_minutes"
 
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text, nullable=False)
+    ticker = Column(Text, nullable=False, index=True)
     per = Column(Text, nullable=False)
     date = Column(Text, nullable=False)
     time = Column(Text, nullable=False)
@@ -371,7 +371,7 @@ class HeikinAshi10Minutes(Base):
     __tablename__ = "heikinashi_10_minutes"
 
     id = Column(Integer, primary_key=True)
-    ticker = Column(Text, nullable=False)
+    ticker = Column(Text, nullable=False, index=True)
     per = Column(Text, nullable=False)
     date = Column(Text, nullable=False)
     time = Column(Text, nullable=False)
